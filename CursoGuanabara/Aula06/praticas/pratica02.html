@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgba(100, 182, 237, 0.479);
+            font: normal 20pt Arial;
+            color: darkred;
+        }
+        
+    </style>
+    <h1 class="texto">asdasd</h1>
+    
+</head>
+<body>
+    <script>
+        const texto = document.querySelector('.texto');
+        let nome = prompt('Qual seu nome?');
+        let idade = prompt('Qual sua idade?');
+        let sexo = prompt('Qual seu gênero?');
+        let salario = prompt('Qual seu salário?');
+        let salarioformatado = salario.toFixed(2).replace('.',',');
+        salario.toLocaleString('pt-Br', {Style: 'currency', currency: 'BRL'}) 
+        document.write(`Seu nome é ${nome}<br/>`);
+        document.write(`Sua idade é ${idade}<br/>`);
+        document.write(`Seu gênero é ${sexo}<br/>`);
+        texto.innerHTML = `Seu salário é ${salario}`;
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="texto"></div>
+    <div>
+        <h1>Teste</h1>
+    </div>
+    <script>
+        const texto = document.querySelector('.texto');
+        let nome = prompt('Qual seu nome?');
+        let idade = prompt('Qual sua idade?');
+        let sexo = prompt('Qual seu gênero?');
+        let salario = parseFloat(prompt('Qual seu salário?')); // Converte para número
+
+        // Formata o salário como moeda
+        let salarioFormatado = salario.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+        // Usa innerHTML para exibir os dados
+        texto.innerHTML = `
+            Seu nome é ${nome}<br/>
+            Sua idade é ${idade}<br/>
+            Seu gênero é ${sexo}<br/>
+            Seu salário é ${salarioFormatado}
+        `;
+    </script>
+    
+</body>
+</html>
