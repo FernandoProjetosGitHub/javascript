@@ -10,7 +10,10 @@ historico_transacoes(): Mostra o histórico de todas as operações realizadas (
 Regras:
 O estoque inicial de qualquer produto deve ser 0.
 Não é permitido ter estoque negativo.
-As transações devem ser registradas com o tipo de operação, o produto e a quantidade.*/
+As transações devem ser registradas com o tipo de operação, o produto e a quantidade.
+Salvar o estoque em um arquivo .json, 
+você deve permitir a edição, delete item do estoque e inserção*/
+
 
 class EstoqueLoja {
     
