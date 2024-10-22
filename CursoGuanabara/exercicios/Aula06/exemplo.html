@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Qual seu país de origem?</h1>
+    Qual sua nacionalidade? <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Registrar" onclick="registrar()">
+    <div id="res">
+        
+    </div>
+    
+    <script>
+        function registrar() {
+            var txtnac = document.querySelector('input#txtnac').value.trim(); // Obtém o valor e remove espaços em branco
+            var res = document.getElementById('res'); // Seleciona o elemento de resultado
+
+            // Verifica se o valor do campo é igual a "Brasileiro" (ou "brasileiro")
+            if (txtnac.toLowerCase() === "brasileiro") {
+                res.innerHTML = `<p>Você é <strong>Brasileiro</strong></p>`;
+            } else {
+                res.innerHTML = `<p>Você é ${txtnac}</p>`;
+            }
+        }
+    </script>
+    
+</body>
+</html>
